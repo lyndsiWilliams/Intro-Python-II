@@ -76,40 +76,40 @@ def the_game():
         # North
         if selection == "n":
             # if n_to path exists on current room...
-            if player.current_room.n_to:
+            try:
                 # Send player to the room to the north
                 player.current_room = player.current_room.n_to
-            else:
+            except:
                 print(denial)
                 # Prompt player for input
                 input_prompt()
         # South
         elif selection == "s":
             # if s_to path exists on current room...
-            if player.current_room.s_to:
+            try:
                 # Send player to the room to the south
                 player.current_room = player.current_room.s_to
-            else:
+            except:
                 print(denial)
                 # Prompt player for input
                 input_prompt()
         # East
         elif selection == "e":
             # if e_to path exists on current room...
-            if player.current_room.e_to:
+            try:
                 # Send player to the room to the east
                 player.current_room = player.current_room.e_to
-            else:
+            except:
                 print(denial)
                 # Prompt player for input
                 input_prompt()
         # West
         elif selection == "w":
             # if w_to path exists on current room...
-            if player.current_room.w_to:
+            try:
                 # Send player to the room to the west
                 player.current_room = player.current_room.w_to
-            else:
+            except:
                 print(denial)
                 # Prompt player for input
                 input_prompt()
